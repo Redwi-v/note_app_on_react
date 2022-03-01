@@ -33,15 +33,16 @@ export const sendNote = note => {
 			const date = new Date().toISOString().slice(0, 10);
 			const noteItem = { note, date };
 			const createdNote = await noteApi.sendNote(noteItem);
+			debugger;
 
 			dispatch(addNewNote(createdNote));
-			chageAletType('good');
-			chageAletText('Заметка создана: ' + note);
-			toggleAlertVisible(true);
+			dispatch(chageAletType('good'));
+			dispatch(chageAletText('Заметка создана: ' + note));
+			dispatch(toggleAlertVisible(true));
 		} catch (error) {
 			//TO DO: сделать нормальную обработку ошибок
 			dispatch(chageAletType('danger'));
-			dispatch(chageAletText(error.response.data.massage));
+			dispatch(chageAletText(error.massage));
 			dispatch(toggleAlertVisible(true));
 		}
 	};

@@ -24,7 +24,6 @@ const FormContainer = props => {
 
 		if (validValue) {
 			sendNote(value);
-
 			updateFormValue('');
 		} else {
 			chageAletType('danger');

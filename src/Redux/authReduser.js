@@ -73,7 +73,7 @@ export const authHandler = (username, password, reqType) => {
 			dispatch(executeAuth(true));
 			dispatch(toggleButtonDisable(false));
 		} catch (error) {
-			dispatch(chageAletText(error.response.data.massage));
+			dispatch(chageAletText(error.message));
 			dispatch(chageAletType('danger'));
 			dispatch(toggleAlertVisible(true));
 			setTimeout(() => {
