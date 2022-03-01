@@ -1,0 +1,40 @@
+.alert {
+	background-color: rgb(167, 165, 165);
+	width: 100%;
+	font-weight: 600;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.text {
+		font-size: 18px;
+		width: 90%;
+		@media (max-width: 400px) {
+			font-size: 14px;
+		}
+	}
+
+	.close {
+		display: flex;
+		justify-content: center;
+		padding-top: 5px;
+		width: 30px;
+		height: 30px;
+		transition: background-color 0.2s;
+		border-radius: 50%;
+		&:hover {
+			background-color: rgb(240, 121, 121);
+		}
+	}
+}
+.good {
+	background-color: rgb(92, 228, 92);
+}
+.danger {
+	background-color: rgb(228, 47, 47);
+}
+
+.worning {
+	background-color: rgb(214, 204, 59);
+}

@@ -1,0 +1,29 @@
+.item {
+	margin: 0 14px;
+	display: inline-block;
+
+	.link {
+		font-size: 15px;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+
+		&::before {
+			content: '';
+			width: 0%;
+			height: 2px;
+			background: linear-gradient(to right, #f8278c, #f37921);
+			position: absolute;
+			bottom: -2px;
+			transition: width 0.3s ease-in-out;
+		}
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+
+	.active {
+		font-weight: 700;
+	}
+}

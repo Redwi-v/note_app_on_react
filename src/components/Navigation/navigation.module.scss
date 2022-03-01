@@ -1,0 +1,61 @@
+.navigation {
+	color: #fff;
+	padding: 10px 0 10px 0;
+	font-size: 18px;
+	font-weight: 400;
+	background: #444444;
+	transition: box-shadow 0.3s ease-in;
+
+	.navigationFlex {
+		display: flex;
+	}
+
+	.logout {
+		white-space: nowrap;
+	}
+
+	.logo {
+		position: relative;
+		white-space: nowrap;
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 4px;
+			background-color: rgb(241, 45, 176);
+			box-shadow: 0px 0px 5px 1px rgba(255, 0, 170, 0.747);
+			position: absolute;
+			border-radius: 50%;
+			animation: move 1.5s ease-in-out infinite;
+			bottom: 0px;
+			right: -5px;
+		}
+	}
+
+	.linkList {
+		display: flex;
+		margin-left: 7%;
+		justify-content: flex-start;
+		width: 90%;
+	}
+}
+
+@keyframes move {
+	0% {
+		bottom: 0px;
+	}
+	15% {
+		bottom: 0;
+	}
+
+	30% {
+		bottom: 2px;
+	}
+
+	40%,
+	90% {
+		bottom: 0;
+	}
+	100% {
+	}
+}
