@@ -18,10 +18,10 @@ class User {
 				username,
 				password,
 			});
+			await this.login(username, password);
 		} catch (error) {
 			throw new Error(error.response.data.massage);
 		}
-		// await this.login(username, password);
 	}
 }
 
